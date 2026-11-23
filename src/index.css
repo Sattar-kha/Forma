@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --forma-canvas: #F2F2F2;
+  --forma-surface: #FFFFFF;
+  --forma-ochre: #9D6432;
+  --forma-ochre-hover: #865326;
+  --forma-ink: #1F1F1F;
+  --forma-ink-secondary: #5A5A5A;
+  --forma-ink-muted: #848484;
+  --forma-border: #DCDCDC;
+  --forma-border-subtle: #E5E5E5;
+  --forma-delivery-green: #228B22;
+  --forma-star: #E6A119;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  background-color: var(--forma-canvas);
+  color: var(--forma-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.forma-no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.forma-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--forma-ink);
+  outline-offset: 2px;
+}
+
+.forma-link-underline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-bottom: 2px;
+}
+
+.forma-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.forma-link-underline:hover::after {
+  transform: scaleX(0.35);
+  transform-origin: left;
+}

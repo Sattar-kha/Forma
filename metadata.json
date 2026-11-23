@@ -1,0 +1,6 @@
+{
+  "name": "FORMA — Contemporary Wooden Chairs",
+  "description": "Timeless contemporary wooden chairs crafted from Maple, Oak, Cherry, and Walnut with a legacy of chair-making since 1890.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
